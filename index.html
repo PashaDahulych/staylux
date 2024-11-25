@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240403161456">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<main class="page__container">
+			<form data-one-select action="files/sendmail/sendmail.php" method="POST" class="form">
+				<input type="hidden" value="secret" id="secretQuestion" />
+				<div class="form__line">
+					<label for="destination">Destination</label>
+					<select data-scroll required id="destination" name="" data-class-modif="form">
+						<option value="">Select destination</option>
+						<option value="Dubai">Dubai</option>
+						<option value="Jumeirah">Jumeirah</option>
+						<option value="Dubai">Dubai</option>
+					</select>
+				</div>
+				<div class="form__calendar">
+					<label for="checkIn">Check - in</label>
+					<div class="form__inp">
+						<i class="_icon-calendar"></i>
+						<input required id="checkIn" data-datepicker type="text" name="checkIn" data-error="" placeholder="" value="" class="input" />
+					</div>
+				</div>
+				<div class="form__calendar">
+					<label for="checkOut">Check - out</label>
+					<div class="form__inp">
+						<i class="_icon-calendar"></i>
+						<input required id="checkOut" data-datepicker type="text" name="checkOut" data-error="" placeholder="" value="" class="input" />
+					</div>
+				</div>
+				<div class="form__line">
+					<label for="guests">Guests</label>
+					<select data-scroll required id="guests" name="" data-class-modif="guests">
+						<option value="">Add guests</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+					</select>
+				</div>
+				<button type="submit" class="form__button">
+					Book now
+				</button>
+			</form>
+			<button class="btn" data-popup="#popup" type="button">
+				Book now
+			</button>
+			<button class="btn" data-popup="#popup-second" type="button">
+				Book now (second)
+			</button>
+		</main>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup popup_show">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<form data-one-select action="files/sendmail/sendmail.php" method="POST" class="form__popup">
+					<input type="hidden" value="secret" id="secretQuestion" />
+					<div class="form__line">
+						<label for="destinationMobilePop">Destination</label>
+						<select data-scroll required id="destinationMobilePop" name="" data-class-modif="form">
+							<option value="0">Select destination</option>
+							<option value="Dubai">Dubai</option>
+							<option value="Jumeirah">Jumeirah</option>
+							<option value="Dubai">Dubai</option>
+						</select>
+					</div>
+					<div class="form__calendar">
+						<label for="checkInMobilePop">Check - in</label>
+						<div class="form__inp">
+							<i class="_icon-calendar"></i>
+							<input required id="checkInMobilePop" data-datepicker type="text" name="checkIn" data-error="" placeholder="" value="" class="input" />
+						</div>
+					</div>
+					<div class="form__calendar">
+						<label for="checkOutMobilePop">Check - out</label>
+						<div class="form__inp">
+							<i class="_icon-calendar"></i>
+							<input required id="checkOutMobilePop" data-datepicker type="text" name="checkOut" data-error="" placeholder="" value="" class="input" />
+						</div>
+					</div>
+					<div class="form__line">
+						<label for="guestsMobilePop">Guests</label>
+						<select data-scroll required id="guestsMobilePop" name="" data-class-modif="guests">
+							<option value="">Add guests</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+						</select>
+					</div>
+					<button disabled type="submit" class="form__button">
+						Book now
+					</button>
+				</form>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- <div id="popup-second" aria-hidden="true" class="popup popup--second">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<form data-one-select action="files/sendmail/sendmail.php" method="POST" class="form__second-popup">
+					<h2 class="popup__ttl">Choose apartments</h2>
+					<input type="hidden" value="secret" id="secretQuestion" />
+					<div class="form__line">
+						<label for="destinationSecondPop">Destination</label>
+						<select data-scroll required id="destinationSecondPop" name="" data-class-modif="destination-second">
+							<option value="">Select destination</option>
+							<option value="Dubai">Dubai</option>
+							<option value="Jumeirah">Jumeirah</option>
+							<option value="Dubai">Dubai</option>
+						</select>
+					</div>
+					<div class="form__line">
+						<label for="guestsPopupSec">Guests</label>
+						<select data-scroll required id="guestsPopupSec" name="" data-class-modif="guests-second">
+							<option value="">Add guests</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+						</select>
+					</div>
+					<div class="form__calendar">
+						<label for="checkInSecondPop">Check - in</label>
+						<div class="form__inp">
+							<i class="_icon-calendar"></i>
+							<input required id="checkInSecondPop" data-datepicker type="text" name="checkIn" data-error="" placeholder="" value="" class="input" />
+						</div>
+					</div>
+					<div class="form__calendar">
+						<label for="checkOutSecondPop">Check - out</label>
+						<div class="form__inp">
+							<i class="_icon-calendar"></i>
+							<input required id="checkOutSecondPop" data-datepicker type="text" name="checkOut" data-error="" placeholder="" value="" class="input" />
+						</div>
+					</div>
+
+					<button type="submit" class="form__button">
+						Book now
+					</button>
+				</form>
+			</div>
+		</div>
+	</div> -->
+	<!-- <script src="js/app.min.js?_v=20240403161456"></script> -->
+	<script src="js/app.js"></script>
+</body>
+
+</html>
